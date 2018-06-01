@@ -7,7 +7,7 @@ namespace RadSynopticReportGenerator {
 
     class DiagnosticReportGet {
       private static dynamic resource(string subject, string procedureCode) =>
-        RestfulProcedures.GetFirstEntryResourceFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
+        RestfulProcedures.GetEntryListFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
 
       public static string Identifier(string subject, string procedureCode) =>
         resource(subject, procedureCode).identifier.Value;
@@ -35,7 +35,7 @@ namespace RadSynopticReportGenerator {
 
     //information for the comoparison studies
     static void getDiagnosticReportsForSubjectByProcedureCode(string subject, string procedureCode) {
-      var resource = RestfulProcedures.GetFirstEntryResourceFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
+      var resource = RestfulProcedures.GetEntryListFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
 
       var mostRecentDate = resource.resource.effectiveDateTime.Value;
       var mostRecentConclusion = resource.resource.conclusion.Value;

@@ -36,27 +36,22 @@ namespace RadSynopticReportGenerator {
       return openClient(baseFhir).Read<DiagnosticReport>($"DiagnosticReport/{_Identifier}");
     }
 
-    private static IRestResponse runApiRequest(RestSharp.Method method, string endpoint, string query) {
-      var request = new RestRequest(method);
-      var client = new RestClient(endpoint + query);
-      request.AddHeader("apikey", Environment.GetEnvironmentVariable("SiimApiKey"));
-      return client.Execute(request);
-    }
+    public static Bundle GetDiagnosticReportsForOptionalCriteria(string[] searchTerms = null) =>
+      openClient(baseFhir).Search("DiagnosticReport", searchTerms ?? new string[] { "" });
 
     private static string getDiagnosticReportIdForSubjectByCode(string subject, string procedureCode) {
       return exampleDiagnosticReportId;
       //return "";
     }
 
-    public static dynamic GetFirstEntryResourceFromFhirDiagnosticReportForSubjectByCode(string subject, string procedureCode) =>
-        JsonConvert.DeserializeObject<dynamic>(
-            runApiRequest(Method.GET, baseFhir, $"DiagnosticReport?subject={subject}&code={procedureCode}").Content)
-          .entry[0].resource;
+    public static List<Bundle.EntryComponent> GetEntryListFromFhirDiagnosticReportForSubjectByCode(string subject, string procedureCode) =>
+      GetDiagnosticReportsForOptionalCriteria(new string[] { $"subject={subject}", $"code={procedureCode}" }).Entry;
 
-    public static string GetValueFromDiagnosticReportByReportIdByAttribute(string id, DiagnosticReportFhir key) {
-      var response = runApiRequest(Method.GET, baseFhir, $"DiagnosticReport/{id}?_element={StandardObjectMapping.DiagnosticReportFhirMapTable(key)}");
-
-      return "";
+    private static IRestResponse runApiRequest(RestSharp.Method method, string endpoint, string query) {
+      var request = new RestRequest(method);
+      var client = new RestClient(endpoint + query);
+      request.AddHeader("apikey", Environment.GetEnvironmentVariable("SiimApiKey"));
+      return client.Execute(request);
     }
 
     public static string GetValueFromStudyByDicomAttributeByUid(DicomAttributeKeyword keyword, string uid = null) {
