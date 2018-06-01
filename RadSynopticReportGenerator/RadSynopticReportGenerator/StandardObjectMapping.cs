@@ -14,7 +14,7 @@ namespace RadSynopticReportGenerator {
     NumberOfStudyRelatedInstances
   }
 
-  public enum DiagnosticReportFhir {
+  public enum FhirAttributesForDiagnosticReport {
     Identifier,
     BasedOn,
     Status,
@@ -45,14 +45,14 @@ namespace RadSynopticReportGenerator {
       : (keyword == DicomAttributeKeyword.NumberOfStudyRelatedInstances) ? "NumberOfStudyRelatedInstances"
       : "";
 
-    public static string DiagnosticReportFhirMapTable(DiagnosticReportFhir keyword) =>
-      (keyword == DiagnosticReportFhir.Identifier) ? "identifier"
-      : (keyword == DiagnosticReportFhir.BasedOn) ? "basedOn"
-      : (keyword == DiagnosticReportFhir.Status) ? "status"
-      : (keyword == DiagnosticReportFhir.Category) ? "category"
-      : (keyword == DiagnosticReportFhir.Code) ? "code"
-      : (keyword == DiagnosticReportFhir.Subject) ? "subject"
-      : (keyword == DiagnosticReportFhir.Context) ? "context"
+    public static string DiagnosticReportFhirMapTable(FhirAttributesForDiagnosticReport keyword) =>
+      (keyword == FhirAttributesForDiagnosticReport.Identifier) ? "identifier"
+      : (keyword == FhirAttributesForDiagnosticReport.BasedOn) ? "basedOn"
+      : (keyword == FhirAttributesForDiagnosticReport.Status) ? "status"
+      : (keyword == FhirAttributesForDiagnosticReport.Category) ? "category"
+      : (keyword == FhirAttributesForDiagnosticReport.Code) ? "code"
+      : (keyword == FhirAttributesForDiagnosticReport.Subject) ? "subject"
+      : (keyword == FhirAttributesForDiagnosticReport.Context) ? "context"
       : "";
 
   }

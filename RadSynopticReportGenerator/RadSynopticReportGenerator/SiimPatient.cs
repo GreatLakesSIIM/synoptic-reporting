@@ -1,0 +1,16 @@
+﻿using Hl7.Fhir.Model;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace RadSynopticReportGenerator {
+  class SiimPatient : Patient {
+    private Identifier identifier;
+    private HumanName name;
+
+    public SiimPatient(Identifier id, HumanName humanName) {
+      base.Identifier.Add(id);
+      base.Name.Add(humanName);
+    }
+  }
+}

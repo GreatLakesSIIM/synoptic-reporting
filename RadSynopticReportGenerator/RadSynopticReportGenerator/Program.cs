@@ -27,20 +27,23 @@ namespace RadSynopticReportGenerator {
       //getDiagnosticReportsForSubjectByProcedureCode("siimjoe", "24627-2");
       //var val = RestfulProcedures.GetValueFromStudyByDicomAttributeByUid(DicomAttributeKeyword.PatientName);
 
-      var dx = RestfulProcedures.GetDiagnosticReportObjectById();
-      var status = dx.Status;
-      Console.WriteLine(status);
+      //var dx = RestfulProcedures.GetDiagnosticReportObjectById();
+      //var status = dx.Status;
+      //Console.WriteLine(status);
+
+      getComparisonAttributesBySubjectByCode("siimjoe", "24627-2");
       Console.ReadLine();
     }
 
     //information for the comoparison studies
-    static void getDiagnosticReportsForSubjectByProcedureCode(string subject, string procedureCode) {
-      var resource = RestfulProcedures.GetEntryListFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
+    static void getComparisonAttributesBySubjectByCode(string subject, string procedureCode) {
+      var bundle = RestfulProcedures.GetBundleDiagnosticReportForOptionalCriteria(new string[] { $"subject={subject}", $"code={procedureCode}" });
 
-      var mostRecentDate = resource.resource.effectiveDateTime.Value;
-      var mostRecentConclusion = resource.resource.conclusion.Value;
+      dynamic resource = bundle.Entry[0].Resource;
+      var mostRecentDate = resource.Effective;
+      var mostRecentConclusion = resource.Conclusion;
 
-      System.IO.File.WriteAllText(@"C:\Users\Peter\Documents\GitHub\resource.txt", resource);
+      //System.IO.File.WriteAllText(@"C:\Users\Peter\Documents\GitHub\resource.txt", entries);
 
       //var diagnosticReports = JsonDomFhirNavigator.Create(response.Content);
     }
