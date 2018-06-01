@@ -5,36 +5,40 @@ using System;
 namespace RadSynopticReportGenerator {
   class Program {
 
-    private static string baseFhir => "http://hackathon.siim.org/fhir/";
-    private static string baseDicomWeb => "http://hackathon.siim.org/dicomweb/";
+    class DiagnosticReportGet {
+      private static dynamic resource(string subject, string procedureCode) =>
+        RestfulProcedures.GetFirstEntryResourceFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
+
+      public static string Identifier(string subject, string procedureCode) =>
+        resource(subject, procedureCode).identifier.Value;
+      public static string Category(string subject, string procedureCode) =>
+        resource(subject, procedureCode).category.Value;
+      public static string Code(string subject, string procedureCode) =>
+        resource(subject, procedureCode).code.Value;
+      public static string CodedDiagnosis(string subject, string procedureCode) =>
+        resource(subject, procedureCode).codedDiagnosis.Value;
+    }
 
     static void Main(string[] args) {
       //var response = runApiRequest(Method.GET, baseFhir, "Patient?name=siimjoe");
       //var results = JsonConvert.DeserializeObject<dynamic>(response.Content);
       //var entry = results.entry;
 
-      getDiagnosticReportsForSubjectByProcedureCode("siimjoe", "24627-2");
+      //getDiagnosticReportsForSubjectByProcedureCode("siimjoe", "24627-2");
+      var val = RestfulProcedures.GetAttributesFromStudyByUid(DicomAttributeKeyword.PatientName);
     }
 
     //information for the comoparison studies
     static void getDiagnosticReportsForSubjectByProcedureCode(string subject, string procedureCode) {
-      var response = runApiRequest(Method.GET, baseFhir, $"DiagnosticReport?subject={subject}&code={procedureCode}");
-      var results = JsonConvert.DeserializeObject<dynamic>(response.Content);
+      var resource = RestfulProcedures.GetFirstEntryResourceFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
 
-      var mostRecentDate = results.entry[0].resource.effectiveDateTime.Value;
-      var mostRecentConclusion = results.entry[0].resource.conclusion.Value;
+      var mostRecentDate = resource.resource.effectiveDateTime.Value;
+      var mostRecentConclusion = resource.resource.conclusion.Value;
 
-      System.IO.File.WriteAllText(@"C:\Users\Peter\Documents\GitHub\output.txt", response.Content.ToString());
+      System.IO.File.WriteAllText(@"C:\Users\Peter\Documents\GitHub\resource.txt", resource);
 
       //var diagnosticReports = JsonDomFhirNavigator.Create(response.Content);
     }
 
-    static IRestResponse runApiRequest(RestSharp.Method method, string endpoint, string query) {
-      var request = new RestRequest(method);
-      var client = new RestClient(endpoint + query);
-      request.AddHeader("apikey", Environment.GetEnvironmentVariable("SiimApiKey"));
-      var result = client.Execute(request);
-      return result;
-    }
   }
 }
