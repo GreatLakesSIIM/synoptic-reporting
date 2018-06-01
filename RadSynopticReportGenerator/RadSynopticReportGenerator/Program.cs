@@ -25,7 +25,12 @@ namespace RadSynopticReportGenerator {
       //var entry = results.entry;
 
       //getDiagnosticReportsForSubjectByProcedureCode("siimjoe", "24627-2");
-      var val = RestfulProcedures.GetAttributesFromStudyByUid(DicomAttributeKeyword.PatientName);
+      //var val = RestfulProcedures.GetValueFromStudyByDicomAttributeByUid(DicomAttributeKeyword.PatientName);
+
+      var dx = RestfulProcedures.GetDiagnosticReportObjectById();
+      var status = dx.Status;
+      Console.WriteLine(status);
+      Console.ReadLine();
     }
 
     //information for the comoparison studies
