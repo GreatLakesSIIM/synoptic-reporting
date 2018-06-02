@@ -1,22 +1,31 @@
-﻿using Newtonsoft.Json;
+﻿using Hl7.Fhir.Model;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 
 namespace RadSynopticReportGenerator {
+
+  public class DiagnosticReportGet {
+    private static string identifierCode;
+    private static DiagnosticReport dx =>
+      RestfulProcedures.GetDiagnosticReportObjectById();
+
+    public DiagnosticReportGet(string id) {
+      identifierCode = id;
+    }
+
+    public string Identifier => dx.Identifier[0].Value;
+    public string Category => dx.Category.Coding[0].Code;
+    public string Code => dx.Code.Text;
+    public string CodedDiagnosis => dx.CodedDiagnosis[0].Text;
+  }
+
   class Program {
 
-    class DiagnosticReportGet {
-      private static dynamic resource(string subject, string procedureCode) =>
-        RestfulProcedures.GetEntryListFromFhirDiagnosticReportForSubjectByCode(subject, procedureCode);
-
-      public static string Identifier(string subject, string procedureCode) =>
-        resource(subject, procedureCode).identifier.Value;
-      public static string Category(string subject, string procedureCode) =>
-        resource(subject, procedureCode).category.Value;
-      public static string Code(string subject, string procedureCode) =>
-        resource(subject, procedureCode).code.Value;
-      public static string CodedDiagnosis(string subject, string procedureCode) =>
-        resource(subject, procedureCode).codedDiagnosis.Value;
+    static void Demo() {
+      var customDxRpt = new DiagnosticReportGet("a654061970756517");
+      Console.WriteLine($"report id: {customDxRpt.Identifier}");
+      Console.WriteLine($"report category: {customDxRpt.Category}");
     }
 
     static void Main(string[] args) {
@@ -37,7 +46,9 @@ namespace RadSynopticReportGenerator {
       //getComparisonAttributesBySubjectByCode("siimjoe", "24627-2");
       //      RestfulProcedures.PostDiagnosticReport();
 
-      GenerateCdaImagingReport.CreateDicomCdaTemplateInXml();
+      //GenerateCdaImagingReport.CreateDicomCdaTemplateInXml();
+
+      Demo();
       Console.ReadLine();
     }
 
