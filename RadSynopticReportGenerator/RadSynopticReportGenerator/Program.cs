@@ -19,7 +19,13 @@ namespace RadSynopticReportGenerator {
         resource(subject, procedureCode).codedDiagnosis.Value;
     }
 
+    private static bool isValidJson(string input) {
+
+    }
+
     static void Main(string[] args) {
+
+      args[0]
       //var response = runApiRequest(Method.GET, baseFhir, "Patient?name=siimjoe");
       //var results = JsonConvert.DeserializeObject<dynamic>(response.Content);
       //var entry = results.entry;
@@ -31,7 +37,8 @@ namespace RadSynopticReportGenerator {
       //var status = dx.Status;
       //Console.WriteLine(status);
 
-      getComparisonAttributesBySubjectByCode("siimjoe", "24627-2");
+      //getComparisonAttributesBySubjectByCode("siimjoe", "24627-2");
+      RestfulProcedures.PostDiagnosticReport();
       Console.ReadLine();
     }
 

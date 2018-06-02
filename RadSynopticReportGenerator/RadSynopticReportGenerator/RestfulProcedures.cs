@@ -48,11 +48,6 @@ namespace RadSynopticReportGenerator {
     public static ImagingStudy GetImagingStudy(string id = null) =>
       OpenFhirClient(baseFhir).Read<ImagingStudy>($"ImagingStudy/{id ?? exampleDiagnosticReportId}");
 
-    private static string getDiagnosticReportIdForSubjectByCode(string subject, string procedureCode) {
-      return exampleDiagnosticReportId;
-      //return "";
-    }
-
     public static List<Bundle.EntryComponent> GetEntryListFromFhirDiagnosticReportForSubjectByCode(string subject, string procedureCode) =>
       GetBundleDiagnosticReportForOptionalCriteria(new string[] { $"subject={subject}", $"code={procedureCode}" }).Entry;
 
@@ -84,9 +79,32 @@ namespace RadSynopticReportGenerator {
     }
 
     public static Result<bool, string> PostDiagnosticReport() {
-      var patient = new Patient();
-      patient.Name.Add(new HumanName());
-      patient.Identifier.Add(new Identifier("MCW", "yuengling"));
+      var patient = new Patient() {
+        Identifier = new List<Identifier> { new Identifier("MCW", "yuengling") },
+        Active = true,
+        Name = new List<HumanName> { new HumanName() { GivenElement = new List<FhirString> { new FhirString("example") } } },
+        Telecom = new List<ContactPoint> { new ContactPoint() },
+        Gender = AdministrativeGender.Unknown,
+        BirthDateElement = new Date(1996),
+        Address = new List<Address> { new Address() { City = "Milwaukee" } },
+        MaritalStatus = new CodeableConcept("http://hl7.org/fhir/v3/MaritalStatus", "S", "Never Married"),
+        Photo = new List<Attachment> { new Attachment() },
+        Contact = new List<Patient.ContactComponent> { new Patient.ContactComponent {
+            Relationship = new List<CodeableConcept> { new CodeableConcept("http://hl7.org/fhir/v2/0131", "C", "Emergency Contact") },
+            Name = new HumanName() { GivenElement = new List<FhirString> { new FhirString("contact") } },
+            Telecom = new List<ContactPoint> { new ContactPoint() },
+            Address = new Address() { City = "Milwaukee" } ,
+            Gender = AdministrativeGender.Unknown,
+            Organization = new ResourceReference("ref","disp"),
+            Period = new Period(new FhirDateTime(1996),new FhirDateTime(2019))} },
+        Communication = new List<Patient.CommunicationComponent> { new Patient.CommunicationComponent() {
+          Language = new CodeableConcept("http://hl7.org/fhir/ValueSet/languages", "en-US", "English (United States)"),
+          Preferred = true } },
+        GeneralPractitioner = new List<ResourceReference>(),
+        //ManagingOrganization = new ResourceReference("MU-MCW", "TeamGreatLakes"),
+        //Link = new List<Patient.LinkComponent> { new Patient.LinkComponent { Other = new ResourceReference("MU-MCW", "TeamGreatLakes"), Type = Patient.LinkType.Refer } }
+      };
+      OpenFhirClient(baseFhir).Create(patient);
       //create diagnostic report with random identifier, assigning authority = MCW
       var study = GetImagingStudy();
       var dx = new DiagnosticReport {
