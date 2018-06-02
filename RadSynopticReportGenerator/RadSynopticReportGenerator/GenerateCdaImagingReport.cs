@@ -18,7 +18,7 @@ namespace RadSynopticReportGenerator {
             new XElement("structuredBody",
               new XElement("component",
                 new XElement("section", new XAttribute("id", "clinicalInformation"), new XAttribute("class", "level1"),
-                  new XElement("label", new XAttribute("for", "SELECTION_LIST_1527609006130"), "White blood cell (WBC) count:"),
+                  new XElement("label", ""),
                   new XElement("select", new XAttribute("for", "SELECTION_LIST_1527609006130"), new XAttribute("name", ""), new XAttribute("data-field-type", "SELECTION_LIST"), new XAttribute("data-field-completion-action", "NONE"), new XAttribute("value", "Normal"))),
                 new XElement("section", new XAttribute("id", "procedureDescription")),
                 new XElement("section", new XAttribute("id", "comparisonStudy")),

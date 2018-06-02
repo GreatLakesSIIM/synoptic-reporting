@@ -2,6 +2,8 @@
 using Newtonsoft.Json;
 using RestSharp;
 using System;
+using System.IO;
+using static System.Environment;
 
 namespace RadSynopticReportGenerator {
 
@@ -48,7 +50,12 @@ namespace RadSynopticReportGenerator {
 
       //GenerateCdaImagingReport.CreateDicomCdaTemplateInXml();
 
-      Demo();
+      //Demo();
+
+      var file = File.OpenText(@"C:\Users\Peter\Documents\GitHub\JsonFromZach.txt");
+      var findingsJson = file.ReadLine();
+      file.Close();
+      var findings = new FindingsBasedOnExampleTemplate235(findingsJson);
       Console.ReadLine();
     }
 
