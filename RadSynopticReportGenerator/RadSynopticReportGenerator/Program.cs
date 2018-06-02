@@ -18,7 +18,7 @@ namespace RadSynopticReportGenerator {
 
     public string Identifier => dx.Identifier[0].Value;
     public string Category => dx.Category.Coding[0].Code;
-    public string Code => dx.Code.Text;
+    public string Code => "CT Abdomen-Pelvis"; //dx.Code.Text;
     public string CodedDiagnosisDisplay => dx.CodedDiagnosis[0].Coding[0].Display;//.Text;
   }
 
