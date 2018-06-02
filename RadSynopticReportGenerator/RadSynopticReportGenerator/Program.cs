@@ -19,7 +19,7 @@ namespace RadSynopticReportGenerator {
     public string Identifier => dx.Identifier[0].Value;
     public string Category => dx.Category.Coding[0].Code;
     public string Code => dx.Code.Text;
-    public string CodedDiagnosis => dx.CodedDiagnosis[0].Text;
+    public string CodedDiagnosisDisplay => dx.CodedDiagnosis[0].Coding[0].Display;//.Text;
   }
 
   class Program {
@@ -28,6 +28,8 @@ namespace RadSynopticReportGenerator {
       var customDxRpt = new DiagnosticReportGet("a654061970756517");
       Console.WriteLine($"report id: {customDxRpt.Identifier}");
       Console.WriteLine($"report category: {customDxRpt.Category}");
+      Console.WriteLine($"report code: {customDxRpt.Code}");
+      Console.WriteLine($"report coded diagnosis: {customDxRpt.CodedDiagnosisDisplay}");
     }
 
     static void Main(string[] args) {
@@ -50,12 +52,12 @@ namespace RadSynopticReportGenerator {
 
       //GenerateCdaImagingReport.CreateDicomCdaTemplateInXml();
 
-      //Demo();
+      Demo();
 
-      var file = File.OpenText(@"C:\Users\Peter\Documents\GitHub\JsonFromZach.txt");
-      var findingsJson = file.ReadLine();
-      file.Close();
-      var findings = new FindingsBasedOnExampleTemplate235(findingsJson);
+      //var file = File.OpenText(@"C:\Users\Peter\Documents\GitHub\JsonFromZach.txt");
+      //var findingsJson = file.ReadLine();
+      //file.Close();
+      //var findings = new FindingsBasedOnExampleTemplate235(findingsJson);
       Console.ReadLine();
     }
 
