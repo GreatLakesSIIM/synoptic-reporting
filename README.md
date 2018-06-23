@@ -3,8 +3,7 @@
 Project A from SiiM18 Hackathon to create a synoptic reporting app
 
 Members:
-  Sonny Darji
   Peter Dobbs
   Zach Nordgren
-  Tom O'Sullivan
-  
+
+Applies the HL7.Fhir.Specification.STU3 (0.95.0) nuget package to automate the entry of available data into a structured reporting application
