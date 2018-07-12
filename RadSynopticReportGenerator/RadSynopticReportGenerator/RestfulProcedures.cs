@@ -12,8 +12,9 @@ using static ResultDotNet.Result;
 
 namespace RadSynopticReportGenerator {
   public class RestfulProcedures {
-    private static string baseFhir => "http://hackathon.siim.org/fhir/";
+    private static string baseSiimFhir => "http://hackathon.siim.org/fhir/";
     private static string baseDicomWeb => "http://hackathon.siim.org/dicomweb/";
+    private static string baseTestFhir => "http://test.fhir.org/r4/";
 
     private static string exampleDiagnosticReportId => "a654061970756517";
     private static string exampleStudyInstanceUid => "1.3.6.1.4.1.14519.5.2.1.7777.9002.701296064147831952903543555759";
@@ -22,7 +23,7 @@ namespace RadSynopticReportGenerator {
     private static string _Identifier { get; set; } // fhir
 
     public static FhirClient OpenFhirClient(string endpoint) {
-      var client = new FhirClient(baseFhir) {
+      var client = new FhirClient(baseSiimFhir) {
         PreferredFormat = ResourceFormat.Json
       };
       client.OnBeforeRequest += (object sender, BeforeRequestEventArgs e) => {
@@ -31,22 +32,41 @@ namespace RadSynopticReportGenerator {
       return client;
     }
 
+
+    // VNA paper stuff:
+
+    public static List<Observation> GetListOfObservationResourcesForSearchTerms(string[] search = null) {
+      var searchTerms = search ?? new string[] { "" };
+      var resourceList = new List<Observation>();
+      var client = new FhirClient(baseTestFhir) {
+        PreferredFormat = ResourceFormat.Json
+      };
+      foreach (var entry in client.Search<Observation>(searchTerms).Entry) {
+        if (entry.HasResource()) {
+          resourceList.Add((Observation)entry.Resource);
+        }
+      }
+      return resourceList;
+    }
+
+    // SIIM stuff:
+
     public static DiagnosticReport GetDiagnosticReportObjectById(string id = null) {
       _Identifier = id ?? exampleDiagnosticReportId;
-      return OpenFhirClient(baseFhir).Read<DiagnosticReport>($"DiagnosticReport/{_Identifier}");
+      return OpenFhirClient(baseSiimFhir).Read<DiagnosticReport>($"DiagnosticReport/{_Identifier}");
     }
 
     public static Bundle GetBundleDiagnosticReportForOptionalCriteria(string[] searchTerms = null) =>
-      OpenFhirClient(baseFhir).Search<DiagnosticReport>(searchTerms ?? new string[] { "" });
+      OpenFhirClient(baseSiimFhir).Search<DiagnosticReport>(searchTerms ?? new string[] { "" });
 
     public static Patient GetPatientByName(string name) =>
-      OpenFhirClient(baseFhir).Read<Patient>($"Patient/{name}");
+      OpenFhirClient(baseSiimFhir).Read<Patient>($"Patient/{name}");
 
     public static DiagnosticReport GetDiagnosticReport(string id = null) =>
-      OpenFhirClient(baseFhir).Read<DiagnosticReport>($"DiagnosticReport/{id ?? exampleDiagnosticReportId}");
+      OpenFhirClient(baseSiimFhir).Read<DiagnosticReport>($"DiagnosticReport/{id ?? exampleDiagnosticReportId}");
 
     public static ImagingStudy GetImagingStudy(string id = null) =>
-      OpenFhirClient(baseFhir).Read<ImagingStudy>($"ImagingStudy/{id ?? exampleDiagnosticReportId}");
+      OpenFhirClient(baseSiimFhir).Read<ImagingStudy>($"ImagingStudy/{id ?? exampleDiagnosticReportId}");
 
     public static List<Bundle.EntryComponent> GetEntryListFromFhirDiagnosticReportForSubjectByCode(string subject, string procedureCode) =>
       GetBundleDiagnosticReportForOptionalCriteria(new string[] { $"subject={subject}", $"code={procedureCode}" }).Entry;
@@ -80,7 +100,7 @@ namespace RadSynopticReportGenerator {
 
     public static Result<bool, string> PostDiagnosticReport() {
       var patient = FhirResource.DefaultPatient;
-      OpenFhirClient(baseFhir).Create(patient);
+      OpenFhirClient(baseSiimFhir).Create(patient);
 
       //create diagnostic report with random identifier, assigning authority = MCW
       var study = GetImagingStudy();
@@ -91,7 +111,7 @@ namespace RadSynopticReportGenerator {
         ImagingStudy = study.ProcedureReference,
         Code = new CodeableConcept("MCW", "birdhouse")
       };
-      OpenFhirClient(baseFhir).Create(dx);
+      OpenFhirClient(baseSiimFhir).Create(dx);
 
       return Ok<bool, string>(true);
     }
