@@ -50,7 +50,7 @@ namespace RadSynopticReportGenerator {
       if (diagnoses.Count > 0) {
         var idList = new List<string>();
 
-        var response = RestfulProcedures.GetListOfDiagnosticReportsForSearchTerms(new string[] { $"diagnosis={diagnoses.ToArray()}" });
+        var response = RestfulProcedures.GetListOfDiagnosticReportsForSearchTerms(new string[] { $"diagnosis={diagnoses.ToArray()}" }); //this format for search params could be messy
         foreach (var dx in response) {
           Console.WriteLine(dx.Text);
         }
