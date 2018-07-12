@@ -28,6 +28,8 @@ namespace RadSynopticReportGenerator {
       return list;
     }
 
+    private static string radlexDotCsvResource = Properties.Resources.Radlex;
+
     private static List<string> loincCodesFromCsv = loadColumn(@"..\lib\RADLEX_to_LOINC.csv", "LoincNumber");
 
     private static List<string> radlexCodesFromCsv = loadColumn(@"..\lib\RADLEX_to_LOINC.csv", "RID");

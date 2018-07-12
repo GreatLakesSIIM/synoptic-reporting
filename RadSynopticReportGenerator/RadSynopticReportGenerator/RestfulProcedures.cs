@@ -34,7 +34,6 @@ namespace RadSynopticReportGenerator {
       return client;
     }
 
-
     // VNA paper stuff:
 
     public static List<Observation> GetListOfObservationResourcesForSearchTerms(string[] search = null) {
