@@ -16,6 +16,8 @@ namespace RadSynopticReportGenerator {
     private static string baseDicomWeb => "http://hackathon.siim.org/dicomweb/";
     private static string baseTestFhir => "http://test.fhir.org/r4/";
 
+    //TODO: create field for referencing source database url in GUI
+
     private static string exampleDiagnosticReportId => "a654061970756517";
     private static string exampleStudyInstanceUid => "1.3.6.1.4.1.14519.5.2.1.7777.9002.701296064147831952903543555759";
 
@@ -44,6 +46,20 @@ namespace RadSynopticReportGenerator {
       foreach (var entry in client.Search<Observation>(searchTerms).Entry) {
         if (entry.HasResource()) {
           resourceList.Add((Observation)entry.Resource);
+        }
+      }
+      return resourceList;
+    }
+
+    public static List<DiagnosticReport> GetListOfDiagnosticReportsForSearchTerms(string[] search = null) {
+      var searchTerms = search ?? new string[] { "" };
+      var resourceList = new List<DiagnosticReport>();
+      var client = new FhirClient(baseTestFhir) {
+        PreferredFormat = ResourceFormat.Json
+      };
+      foreach (var entry in client.Search<DiagnosticReport>(searchTerms).Entry) {
+        if (entry.HasResource()) {
+          resourceList.Add((DiagnosticReport)entry.Resource);
         }
       }
       return resourceList;
