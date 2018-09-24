@@ -30,6 +30,7 @@ namespace RadSynopticReportGenerator {
     static void Main(string[] args) {
 
       queryForResourcesByParameters();
+      RestfulProcedures.GetListOfDiagnosticReportsForSearchTerms(new string[] { $"diagnosis={Mapping.RidToLoinc["RID4226"]}" });
 
       Console.WriteLine("Press Enter to continue");
       Console.ReadLine();
