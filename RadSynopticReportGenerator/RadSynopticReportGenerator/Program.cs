@@ -36,8 +36,8 @@ namespace RadSynopticReportGenerator {
     }
 
     // VNA stuff:
-
     //loosly based on https://github.com/GreatLakesSIIM/ai-portal/blob/d5a88c621e0c557c19ca26fd5219b4dd30b17920/src/AI_Portal_GUI.py#L376
+
     static void queryForResourcesByParameters(/* TODO: insert parameters of interest */) {
       getListOfDiagnosesFromGUI(); //still TODO
 
@@ -55,6 +55,12 @@ namespace RadSynopticReportGenerator {
           Console.WriteLine(dx.Text);
         }
       }
+    }
+
+    static void previewDataSetCriteria() {
+      //modality, date range, procedure, findings, impression, recommendation, critical results, diagnosis,
+      //  age range, sex, smoking, ethnicity, max number of studies, 
+      //  source, get reports, get studies with reports, create research PID
     }
 
     //TODO: get list of search diagnoses from GUI

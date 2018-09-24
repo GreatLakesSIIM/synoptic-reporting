@@ -29,7 +29,10 @@ namespace RadSynopticReportGenerator {
             }
           }
         },
-        Subject = new ResourceReference("Patient/f201", "Roel"),
+        Subject = new ResourceReference() {
+          Reference = "Patient/f201",
+          Display = "Roel"
+        },
         Issued = new DateTimeOffset(2013, 04, 04, 14, 34, 00, new TimeSpan(1, 0, 0)),
         Performer = new List<ResourceReference>() {
           new ResourceReference() {

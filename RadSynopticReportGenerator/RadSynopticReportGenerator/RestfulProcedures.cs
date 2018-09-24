@@ -64,8 +64,6 @@ namespace RadSynopticReportGenerator {
       return resourceList;
     }
 
-    // SIIM stuff:
-
     public static DiagnosticReport GetDiagnosticReportObjectById(string id = null) {
       _Identifier = id ?? exampleDiagnosticReportId;
       return OpenFhirClient(baseSiimFhir).Read<DiagnosticReport>($"DiagnosticReport/{_Identifier}");
@@ -85,6 +83,9 @@ namespace RadSynopticReportGenerator {
 
     public static List<Bundle.EntryComponent> GetEntryListFromFhirDiagnosticReportForSubjectByCode(string subject, string procedureCode) =>
       GetBundleDiagnosticReportForOptionalCriteria(new string[] { $"subject={subject}", $"code={procedureCode}" }).Entry;
+
+    public static List<Bundle.EntryComponent> GetEntryListFromFhirDiagnosticReportForSubject(ResourceReference subject, CodeableConcept procedureCode) =>
+      GetBundleDiagnosticReportForOptionalCriteria(new string[] { $"subject={subject.Reference}", $"code={procedureCode.Text}" }).Entry;
 
     private static IRestResponse runApiRequest(RestSharp.Method method, string endpoint, string query) {
       var request = new RestRequest(method);
