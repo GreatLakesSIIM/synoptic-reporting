@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<head>
+  <title>CT Chest Abdomen Pelvis</title>
+  <meta charset="UTF-8" />
+  <meta name="dcterms.identifier" content="f1323a34-4eab-46b7-924c-f1c72f691cb2" />
+  <meta name="dcterms.title" content="CT Chest Abdomen Pelvis" />
+  <meta name="dcterms.description" content="" />
+  <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+  <meta name="dcterms.language" content="en" />
+  <meta name="dcterms.publisher" content="Thomas Jefferson University (TJU)" />
+  <meta name="dcterms.rights" content="May be used freely, subject to license agreement" />
+  <meta name="dcterms.license" content="http://www.radreport.org/license.pdf" />
+  <meta name="dcterms.date" content="2018-05-29" />
+  <meta name="dcterms.creator" content="Lakhani P, MD (TJU)" />
+  <meta name="dcterms.contributor" content="Kahn, CE Jr (MCW);  O'Connor, Stacy, MD (MCW);  Sippel Schmidt, Teri (MU)" />
+  <script type="text/xml">
+    <template_attributes>
+      <coded_content>
+        <coding_schemes>
+          <coding_scheme name="RADLEX" designator="2.16.840.1.113883.6.256"></coding_scheme>
+          <coding_scheme name="LOINC" designator="2.16.840.1.113883.6.1"></coding_scheme>
+        </coding_schemes>
+        <entry origtxt="findings">
+          <term>
+            <code meaning="Procedure Findings" value="59776-5" scheme="LOINC"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006057_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006057_1">
+          <term>
+            <code meaning="enlarged" value="RID5791" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006178">
+          <term>
+            <code meaning="diagnosis" value="RID10394" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006178_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006135_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006135_1">
+          <term>
+            <code meaning="elevated amount" value="RID39313" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006130_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006130_1">
+          <term>
+            <code meaning="elevated amount" value="RID39313" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SECTION_HEADER_1527609006163">
+          <term>
+            <code meaning="lungs" value="RID13437" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006054">
+          <term>
+            <code meaning="atherosclerosis" value="RID39049" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006054_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006054_1">
+          <term>
+            <code meaning="atherosclerotic plaque" value="RID3290" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SECTION_HEADER_1527609006041">
+          <term>
+            <code meaning="region of chest wall" value="RID29858" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006060">
+          <term>
+            <code meaning="pericardial effusion" value="RID38588" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006060_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006063_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="NUMBER_1527609006162">
+          <term>
+            <code meaning="maximum size" value="RID49883" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006168">
+          <term>
+            <code meaning="segment of large intestine" value="RID13424" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006168_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006168_1">
+          <term>
+            <code meaning="diverticulitis" value="RID3409" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006048">
+          <term>
+            <code meaning="pleural space" value="RID1363" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006048_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006125_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="NUMBER_1527609006164">
+          <term>
+            <code meaning="maximum size" value="RID49883" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006088">
+          <term>
+            <code meaning="set of adrenal glands" value="RID28752" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006088_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006045">
+          <term>
+            <code meaning="lungs" value="RID13437" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006045_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006045_1">
+          <term>
+            <code meaning="internal nodules" value="RID43335" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006122">
+          <term>
+            <code meaning="wall of abdomen proper" value="RID2483" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006122_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="NUMBER_1527609006167">
+          <term>
+            <code meaning="maximum size" value="RID49883" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006093">
+          <term>
+            <code meaning="kidney" value="RID205" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006171">
+          <term>
+            <code meaning="small intestine" value="RID132" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006171_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006051">
+          <term>
+            <code meaning="set of chest vessels" value="RID49962" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006051_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="procedureInformation">
+          <term>
+            <code meaning="Current Imaging Procedure Description" value="55111-9" scheme="LOINC"></code>
+          </term>
+        </entry>
+        <entry origtxt="comparisons">
+          <term>
+            <code meaning="Radiology Comparison Study" value="18834-2" scheme="LOINC"></code>
+          </term>
+        </entry>
+        <entry origtxt="impression">
+          <term>
+            <code meaning="Impressions" value="19005-8" scheme="LOINC"></code>
+          </term>
+        </entry>
+        <entry origtxt="SECTION_HEADER_1527609006069">
+          <term>
+            <code meaning="abdomen proper" value="RID29989" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006116">
+          <term>
+            <code meaning="set of pelvis vessels" value="RID49933" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006116_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006116_1">
+          <term>
+            <code meaning="atherosclerotic plaque" value="RID3290" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006239_0">
+          <term>
+            <code meaning="none" value="RID28454" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006119">
+          <term>
+            <code meaning="retroperitoneum" value="RID431" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006119_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006079">
+          <term>
+            <code meaning="body of gallbladder" value="RID189" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006079_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="NUMBER_1527609006133">
+          <term>
+            <code meaning="Tc-99m white blood cells" value="RID45695" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006113">
+          <term>
+            <code meaning="region of pelvic peritoneum" value="RID31167" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006113_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006236_0">
+          <term>
+            <code meaning="none" value="RID28454" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006236_1">
+          <term>
+            <code meaning="category 1 actionable finding" value="RID49480" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006236_2">
+          <term>
+            <code meaning="category 2 actionable finding" value="RID49481" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006236_3">
+          <term>
+            <code meaning="category 3 actionable finding" value="RID49482" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006031">
+          <term>
+            <code meaning="contrast agent" value="RID11582" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006076">
+          <term>
+            <code meaning="set of biliary ducts" value="RID45712" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006076_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006230_0">
+          <term>
+            <code meaning="none" value="RID28454" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006110">
+          <term>
+            <code meaning="mesenteric lymph node group" value="RID31968" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006110_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="NUMBER_1527609006134">
+          <term>
+            <code meaning="temporo-occipital part of inferior temporal gyrus" value="RID34498" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006082">
+          <term>
+            <code meaning="body of pancreas" value="RID174" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006082_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006184_0">
+          <term>
+            <code meaning="none" value="RID28454" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006184_1">
+          <term>
+            <code meaning="Fleischner view" value="RID43620" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006085">
+          <term>
+            <code meaning="spleen" value="RID86" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006085_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006085_1">
+          <term>
+            <code meaning="enlarged spleen" value="RID34587" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006028">
+          <term>
+            <code meaning="procedure" value="RID1559" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006028_0">
+          <term>
+            <code meaning="chest pain" value="RID45774" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006107_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006101">
+          <term>
+            <code meaning="set of ureters" value="RID31090" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006104">
+          <term>
+            <code meaning="zone of urinary bladder" value="RID30510" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006104_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SECTION_HEADER_1527609006097">
+          <term>
+            <code meaning="pelvis" value="RID2507" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006066">
+          <term>
+            <code meaning="chest wall" value="RID2468" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006066_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006144">
+          <term>
+            <code meaning="number of pulmonary nodules" value="RID50150" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006073">
+          <term>
+            <code meaning="liver imaging observation" value="RID39431" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006073_0">
+          <term>
+            <code meaning="normal" value="RID13173" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006150">
+          <term>
+            <code meaning="number of pulmonary nodules" value="RID50150" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="SELECTION_LIST_1527609006190_0">
+          <term>
+            <code meaning="none" value="RID28454" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="clinicalInformation">
+          <term>
+            <code meaning="Clinical Information" value="55752-0" scheme="LOINC"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217">
+          <term>
+            <code meaning="Lung-RADS assessment" value="RID50134" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_0">
+          <term>
+            <code meaning="none" value="RID28454" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_1">
+          <term>
+            <code meaning="Lung-RADS 0" value="RID50135" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_2">
+          <term>
+            <code meaning="Lung-RADS 1" value="RID50136" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_3">
+          <term>
+            <code meaning="Lung-RADS 2" value="RID50137" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_4">
+          <term>
+            <code meaning="Lung-RADS 3" value="RID50138" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_5">
+          <term>
+            <code meaning="Lung-RADS 4A" value="RID50139" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_6">
+          <term>
+            <code meaning="Lung-RADS 4B" value="RID50140" scheme="RADLEX"></code>
+          </term>
+        </entry>
+        <entry origtxt="CHECKBOX_1527609006217_7">
+          <term>
+            <code meaning="Lung-RADS 4X" value="RID50141" scheme="RADLEX"></code>
+          </term>
+        </entry>
+      </coded_content>
+    </template_attributes>
+  </script>
+</head>
+<body>
+    <templateId />
+    <code />
+    <component>
+      <structuredBody>
+        <component>
+          <section id="clinicalInformation" class="level1" data-section-name="Clinical Information">
+            <header class="level1">
+              Clinical Information
+            </header>
+            <p title="">
+              <label for="SELECTION_LIST_1527609006130">White blood cell (WBC) count:</label>
+              <select id="SELECTION_LIST_1527609006130" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Elevated">
+                <option id="SELECTION_LIST_1527609006130_0" value="Normal" name="SELECTION_LIST_1527609006130" selected="">Normal</option>
+                <option id="SELECTION_LIST_1527609006130_1" value="Elevated" name="SELECTION_LIST_1527609006130">Elevated</option>
+              </select>
+            </p>
+            <p title="">
+              <label for="NUMBER_1527609006133">White blood cell (WBC) count:</label>
+              <span>
+                <input type="number" step="1.0" data-field-units="" id="NUMBER_1527609006133" name="" data-field-type="NUMBER" data-field-completion-action="NONE" value="15000" />
+              </span>
+            </p>
+            <p title="">
+              <label for="SELECTION_LIST_1527609006135">Creatinine level:</label>
+              <select id="SELECTION_LIST_1527609006135" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Elevated">
+                <option id="SELECTION_LIST_1527609006135_0" value="Normal" name="SELECTION_LIST_1527609006135" selected="">Normal</option>
+                <option id="SELECTION_LIST_1527609006135_1" value="Elevated" name="SELECTION_LIST_1527609006135">Elevated</option>
+              </select>
+            </p>
+            <p title="">
+              <label for="NUMBER_1527609006134">Creatinine:</label>
+              <span>
+                <input type="number" step="1.0" data-field-units="" id="NUMBER_1527609006134" name="" data-field-type="NUMBER" data-field-completion-action="NONE" value="" />
+              </span>
+            </p>
+            <p title="">
+              <label for="SELECTION_LIST_1527609006190">Smoking history:</label>
+              <select id="SELECTION_LIST_1527609006190" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="None">
+                <option id="SELECTION_LIST_1527609006190_0" value="None" name="SELECTION_LIST_1527609006190" selected="">None</option>
+                <option id="SELECTION_LIST_1527609006190_1" value="xx pack days with xxx years" name="SELECTION_LIST_1527609006190">xx pack days with xxx years</option>
+              </select>
+            </p>
+            <p title="">
+              <label for="clinicalInformationText">Comments:</label>
+              <textarea rows="3" cols="100" id="clinicalInformationText" name="" data-field-type="TEXTAREA" data-field-completion-action="NONE"></textarea>
+            </p>
+          </section>
+          <section id="procedureInformation" class="level1" data-section-name="Procedure Description" />
+          <section id="comparisonStudy" class="level1" data-section-name="Comparison Study" />
+          <section id="findings" class="level1" data-section-name="Findings" />
+            <header class="level1">
+                Findings
+            </header>
+            <section id="SECTION_HEADER_1527609006041" class="level2" data-section-name="Chest:">
+              <header class="level2">
+                Chest:
+              </header>
+              <section id="SECTION_HEADER_1527609006163" class="level2" data-section-name="Lungs and large airways:">
+                <header class="level2">
+                  Lungs and large airways:
+                </header>
+                <p title="">
+                  <label for="SELECTION_LIST_1527609006045">Lungs and large airways:</label>
+                  <select id="SELECTION_LIST_1527609006045" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Nodules present">
+                    <option id="SELECTION_LIST_1527609006045_0" value="Normal" name="SELECTION_LIST_1527609006045" selected="">Normal</option>
+                    <option id="SELECTION_LIST_1527609006045_1" value="Nodules present" name="SELECTION_LIST_1527609006045">Nodules present</option>
+                  </select>
+                </p>
+                <p title="">
+                  <label for="SELECTION_LIST_1527609006144">Number of pulmonary nodules found/being reported:</label>
+                  <input list="SELECTION_LIST_1527609006144_LIST" id="SELECTION_LIST_1527609006144" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="3" />
+                  <datalist id="SELECTION_LIST_1527609006144_LIST">
+                    <option id="SELECTION_LIST_1527609006144_0" value="1" name="SELECTION_LIST_1527609006144" selected="">1</option>
+                    <option id="SELECTION_LIST_1527609006144_1" value="2" name="SELECTION_LIST_1527609006144">2</option>
+                    <option id="SELECTION_LIST_1527609006144_2" value="3" name="SELECTION_LIST_1527609006144">3</option>
+                    <option id="SELECTION_LIST_1527609006144_3" value="4" name="SELECTION_LIST_1527609006144">4</option>
+                    <option id="SELECTION_LIST_1527609006144_4" value="5" name="SELECTION_LIST_1527609006144">5</option>
+                  </datalist>
+                </p>
+                <p title="">
+                  <label for="NUMBER_1527609006162">Size of pulmonary nodule:</label>
+                  <span>
+                    <input type="number" step="1.0" data-field-units="mm" id="NUMBER_1527609006162" name="" data-field-type="NUMBER" data-field-completion-action="NONE" value="" />
+                    mm
+                  </span>
+                </p>
+                <p title="">
+                  <label for="NUMBER_1527609006164">Size of pulmonary nodule:</label>
+                  <span>
+                    <input type="number" step="1.0" data-field-units="mm" id="NUMBER_1527609006164" name="" data-field-type="NUMBER" data-field-completion-action="NONE" value="" />
+                    mm
+                  </span>
+                </p>
+                <p title="">
+                  <label for="SELECTION_LIST_1527609006150">Anzahl der Lungenknoten gefunden:</label>
+                  <input list="SELECTION_LIST_1527609006150_LIST" id="SELECTION_LIST_1527609006150" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Null" />
+                  <datalist id="SELECTION_LIST_1527609006150_LIST">
+                    <option id="SELECTION_LIST_1527609006150_0" value="Null" name="SELECTION_LIST_1527609006150" selected="">Null</option>
+                    <option id="SELECTION_LIST_1527609006150_1" value="Eins" name="SELECTION_LIST_1527609006150">Eins</option>
+                    <option id="SELECTION_LIST_1527609006150_2" value="Zwei" name="SELECTION_LIST_1527609006150">Zwei</option>
+                    <option id="SELECTION_LIST_1527609006150_3" value="Drei" name="SELECTION_LIST_1527609006150">Drei</option>
+                    <option id="SELECTION_LIST_1527609006150_4" value="Vier" name="SELECTION_LIST_1527609006150">Vier</option>
+                    <option id="SELECTION_LIST_1527609006150_5" value="Funf" name="SELECTION_LIST_1527609006150">Funf</option>
+                  </datalist>
+                </p>
+                <p title="">
+                  <label for="NUMBER_1527609006167">Gr&ouml;&szlig;e des Lungenknotens:</label>
+                  <span>
+                    <input type="number" step="1.0" data-field-units="mm" id="NUMBER_1527609006167" name="" data-field-type="NUMBER" data-field-completion-action="NONE" value="" />
+                    mm
+                  </span>
+                </p>
+              </section>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006048">Pleura:</label>
+                <select id="SELECTION_LIST_1527609006048" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006048_0" value="Normal" name="SELECTION_LIST_1527609006048" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006048_1" value="" name="SELECTION_LIST_1527609006048"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006051">Vessels:</label>
+                <select id="SELECTION_LIST_1527609006051" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006051_0" value="Normal" name="SELECTION_LIST_1527609006051" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006051_1" value="" name="SELECTION_LIST_1527609006051"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006054">Atherosclerosis:</label>
+                <select id="SELECTION_LIST_1527609006054" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Atherosclerotic changes in the aorta and coronary arteries">
+                  <option id="SELECTION_LIST_1527609006054_0" value="Normal" name="SELECTION_LIST_1527609006054" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006054_1" value="Atherosclerotic changes in the aorta and coronary arteries" name="SELECTION_LIST_1527609006054">Atherosclerotic changes in the aorta and coronary arteries</option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006057">Heart size:</label>
+                <select id="SELECTION_LIST_1527609006057" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Mildly enlarged">
+                  <option id="SELECTION_LIST_1527609006057_0" value="Normal" name="SELECTION_LIST_1527609006057" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006057_1" value="Mildly enlarged" name="SELECTION_LIST_1527609006057">Mildly enlarged</option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006060">Pericardial effusion:</label>
+                <select id="SELECTION_LIST_1527609006060" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006060_0" value="Normal" name="SELECTION_LIST_1527609006060" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006060_1" value="" name="SELECTION_LIST_1527609006060"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006063">Mediastium and hila:</label>
+                <select id="SELECTION_LIST_1527609006063" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006063_0" value="Normal" name="SELECTION_LIST_1527609006063" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006063_1" value="" name="SELECTION_LIST_1527609006063"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006066">Chest wall and lower neck:</label>
+                <select id="SELECTION_LIST_1527609006066" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006066_0" value="Normal" name="SELECTION_LIST_1527609006066" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006066_1" value="" name="SELECTION_LIST_1527609006066"></option>
+                </select>
+              </p>
+            </section>
+            <section id="SECTION_HEADER_1527609006069" class="level2" data-section-name="Abdomen:">
+              <header class="level2">
+                Abdomen:
+              </header>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006073">Liver:</label>
+                <select id="SELECTION_LIST_1527609006073" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006073_0" value="Normal" name="SELECTION_LIST_1527609006073" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006073_1" value="" name="SELECTION_LIST_1527609006073"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006076">Bile ducts:</label>
+                <select id="SELECTION_LIST_1527609006076" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006076_0" value="Normal" name="SELECTION_LIST_1527609006076" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006076_1" value="" name="SELECTION_LIST_1527609006076"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006079">Gallbladder:</label>
+                <select id="SELECTION_LIST_1527609006079" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="No calcified gallstones.  Normal caliber wall.">
+                  <option id="SELECTION_LIST_1527609006079_0" value="No calcified gallstones.  Normal caliber wall." name="SELECTION_LIST_1527609006079" selected="">No calcified gallstones. Normal caliber wall.</option>
+                  <option id="SELECTION_LIST_1527609006079_1" value="" name="SELECTION_LIST_1527609006079"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006082">Pancreas:</label>
+                <select id="SELECTION_LIST_1527609006082" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006082_0" value="Normal" name="SELECTION_LIST_1527609006082" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006082_1" value="" name="SELECTION_LIST_1527609006082"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006085">Spleen:</label>
+                <select id="SELECTION_LIST_1527609006085" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Enlarged spleen">
+                  <option id="SELECTION_LIST_1527609006085_0" value="Normal" name="SELECTION_LIST_1527609006085" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006085_1" value="Enlarged spleen" name="SELECTION_LIST_1527609006085">Enlarged spleen</option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006088">Adrenals:</label>
+                <select id="SELECTION_LIST_1527609006088" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006088_0" value="Normal" name="SELECTION_LIST_1527609006088" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006088_1" value="" name="SELECTION_LIST_1527609006088"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006168">Large intestines:</label>
+                <input list="SELECTION_LIST_1527609006168_LIST" id="SELECTION_LIST_1527609006168" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Diverticulitis" />
+                <datalist id="SELECTION_LIST_1527609006168_LIST">
+                  <option id="SELECTION_LIST_1527609006168_0" value="Normal" name="SELECTION_LIST_1527609006168" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006168_1" value="Diverticulitis" name="SELECTION_LIST_1527609006168">Diverticulitis</option>
+                </datalist>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006171">Small intestines:</label>
+                <input list="SELECTION_LIST_1527609006171_LIST" id="SELECTION_LIST_1527609006171" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal" />
+                <datalist id="SELECTION_LIST_1527609006171_LIST">
+                  <option id="SELECTION_LIST_1527609006171_0" value="Normal" name="SELECTION_LIST_1527609006171" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006171_1" value="" name="SELECTION_LIST_1527609006171"></option>
+                </datalist>
+              </p>
+            </section>
+            <section id="SECTION_HEADER_1527609006097" class="level2" data-section-name="Pelvis:">
+              <header class="level2">
+                Pelvis:
+              </header>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006098">Reproductive organs:</label>
+                <select id="SELECTION_LIST_1527609006098" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="No pelvic masses.">
+                  <option id="SELECTION_LIST_1527609006098_0" value="No pelvic masses." name="SELECTION_LIST_1527609006098" selected="">No pelvic masses.</option>
+                  <option id="SELECTION_LIST_1527609006098_1" value="" name="SELECTION_LIST_1527609006098"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006101">Ureters:</label>
+                <select id="SELECTION_LIST_1527609006101" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006101_0" value="Normal" name="SELECTION_LIST_1527609006101" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006101_1" value="" name="SELECTION_LIST_1527609006101"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006104">Bladder:</label>
+                <select id="SELECTION_LIST_1527609006104" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006104_0" value="Normal" name="SELECTION_LIST_1527609006104" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006104_1" value="" name="SELECTION_LIST_1527609006104"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006107">Bowel:</label>
+                <select id="SELECTION_LIST_1527609006107" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal caliber">
+                  <option id="SELECTION_LIST_1527609006107_0" value="Normal caliber" name="SELECTION_LIST_1527609006107" selected="">Normal caliber</option>
+                  <option id="SELECTION_LIST_1527609006107_1" value="" name="SELECTION_LIST_1527609006107"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006110">Mesenteric lymph nodes:</label>
+                <select id="SELECTION_LIST_1527609006110" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="No enlarged mesenteric lymph nodes">
+                  <option id="SELECTION_LIST_1527609006110_0" value="No enlarged mesenteric lymph nodes" name="SELECTION_LIST_1527609006110" selected="">No enlarged mesenteric lymph nodes</option>
+                  <option id="SELECTION_LIST_1527609006110_1" value="" name="SELECTION_LIST_1527609006110"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006113">Peritoneum:</label>
+                <select id="SELECTION_LIST_1527609006113" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006113_0" value="Normal" name="SELECTION_LIST_1527609006113" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006113_1" value="" name="SELECTION_LIST_1527609006113"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006116">Vessels:</label>
+                <select id="SELECTION_LIST_1527609006116" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Atherosclerotic changes">
+                  <option id="SELECTION_LIST_1527609006116_0" value="Normal" name="SELECTION_LIST_1527609006116" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006116_1" value="Atherosclerotic changes" name="SELECTION_LIST_1527609006116">Atherosclerotic changes</option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006119">Retroperitoneum:</label>
+                <select id="SELECTION_LIST_1527609006119" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006119_0" value="Normal" name="SELECTION_LIST_1527609006119" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006119_1" value="" name="SELECTION_LIST_1527609006119"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006122">Abdominal wall:</label>
+                <select id="SELECTION_LIST_1527609006122" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006122_0" value="Normal" name="SELECTION_LIST_1527609006122" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006122_1" value="" name="SELECTION_LIST_1527609006122"></option>
+                </select>
+              </p>
+              <p title="">
+                <label for="SELECTION_LIST_1527609006125">Bones:</label>
+                <select id="SELECTION_LIST_1527609006125" name="" data-field-type="SELECTION_LIST" data-field-completion-action="NONE" value="Normal">
+                  <option id="SELECTION_LIST_1527609006125_0" value="Normal" name="SELECTION_LIST_1527609006125" selected="">Normal</option>
+                  <option id="SELECTION_LIST_1527609006125_1" value="" name="SELECTION_LIST_1527609006125"></option>
+                </select>
+              </p>
+            </section>
+            <p title="">
+                <label for="TEXT_1527609006129">Comments:</label>
+                <input type="text" id="TEXT_1527609006129" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="" />
+            </p>
+          <section id="impression" class="level1" data-section-name="Impression" />
+        </component>
+      </structuredBody>
+    </component>
+  </ClinicalDocument>
+</body>

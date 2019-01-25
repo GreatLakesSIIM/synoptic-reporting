@@ -1,0 +1,137 @@
+{
+  "resourceType": "Bundle",
+  "id": "6e354c5c-aa5e-4092-8016-b756a59864d3",
+  "meta": {
+    "lastUpdated": "2018-05-31T16:40:58.328-04:00"
+  },
+  "type": "searchset",
+  "total": 2,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hackathon.siim.org/fhir-overview/baseDstu3/DiagnosticReport?code=24627-2&subject=siimjoe"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hackathon.siim.org/fhir-overview/baseDstu3/DiagnosticReport/a654061970756517",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "a654061970756517",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2018-05-31T03:00:39.536-04:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Clinical indication: Followup lung mass.</p><p>Comparison: Chest CTA from 5/5/1986</p><p>Technique: Multidetector axial CT of the chest was performed without the administration of intravenous contrast.</p><p>Findings:</p><p>Interval placement of a tracheostomy tube. </p><p>The thyroid and thoracic inlet are normal. There are no grossly enlarged axillary or mediastinal lymph nodes, however the hila are difficult to assess without the use of contrast. There is relative hyperdensity of the intraventricular septum suggestive of anemia. The heart is normal in size without significant pericardial effusion. A small hiatal hernia is present.</p><p>Stable emphysema. Post-surgical changes from left lower lobectomy again seen with persistent moderate to large subpulmonic loculated hydropneumothorax. Interval decrease in septal thickening with mild persistent septal prominence within the right lung.</p><p>Upper abdomen unremarkable given lack of IV contrast.</p><p>Stable surgical defect in the posterior left 6th rib. No suspicious osseous lesions.</p><p>Impression: 1. Stable findings of left lower lobectomy with persistent subpulmonic hydropneumothorax.</p><p>2. Interval decrease in pulmonary edema with mild residual right sided septal prominence.</p></div>"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://www.siim.org/",
+            "value": "a654061970756517"
+          }
+        ],
+        "status": "final",
+        "category": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0074",
+              "code": "RAD"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org/",
+              "code": "24627-2"
+            }
+          ],
+          "text": "Chest CT"
+        },
+        "subject": {
+          "reference": "Patient/siimjoe"
+        },
+        "effectiveDateTime": "1986-05-31",
+        "issued": "1986-05-31T14:30:00+10:00",
+        "conclusion": "Impression: 1. Stable findings of left lower lobectomy with persistent subpulmonic hydropneumothorax. 2. Interval decrease in pulmonary edema with mild residual right sided septal prominence.",
+        "codedDiagnosis": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "35917007",
+                "display": "Adenocarcinoma"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hackathon.siim.org/fhir-overview/baseDstu3/DiagnosticReport/a257132503242682",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "a257132503242682",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2018-05-31T03:00:39.855-04:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>CT Onco Lung Mass 3/30/1986</p>\n\n<p>Clinical information\n60 yo male with left hilar mass.</p>\n\n<p>Comparison\nNone.</p>\n\n<p>Findings\nLung mass\nSize: 5.3 x 4.0 x 4.0 cm</p>\n\n<p>Location: left hilar region</p>\n\n<p>Shape: Smoothly marginated</p>\n\n<p>Internal consistency: homogenous, hypodense to surrounding muscle.</p>\n\n<p>Local extent\nPleural surface: Left lower lobe metastasis</p>\n\n<p>Chest wall: No involvement.</p>\n\n<p>Airway: Compression of the lingula</p>\n\n<p>Vessels: Mass surrounds and nearly occludes the left inferior pulmonary artery.</p>\n\n<p>Nerves: No involvement.</p>\n\n<p>Regional extent\nLymph nodes: AP window, and right hilar adenopathy.</p>\n\n<p>Distant metastases (chest and upper abdomen): None.</p>\n\n<p>Other findings\nOther findings: None. </p>\n\n<p>Impression\nLeft hilar mass concerning for malignancy.</p></div>"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://www.siim.org/",
+            "value": "a257132503242682"
+          }
+        ],
+        "status": "final",
+        "category": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0074",
+              "code": "RAD"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org/",
+              "code": "24627-2"
+            }
+          ],
+          "text": "chest CT"
+        },
+        "subject": {
+          "reference": "Patient/siimjoe"
+        },
+        "effectiveDateTime": "1986-03-30",
+        "issued": "1986-03-30T09:23:00+10:00",
+        "conclusion": "Impression: Left hilar mass concerning for malignancy.",
+        "codedDiagnosis": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "35917007",
+                "display": "Adenocarcinoma"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

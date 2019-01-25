@@ -35,6 +35,13 @@ class Application(tk.Frame):
 
     def pullPatientInfo(self):
         print('Getting Patient Info')
+        url = 'http://hackathon.siim.org/fhir/Patient/name={}'.format(
+            self.formInfo['patientName'].get())
+        heads = {'apikey', ''}
+        self.formInfo['req'] = requests.get(url, headers=heads)
+        self.formInfo['bsForm'] = BeautifulSoup(
+            self.formInfo['req'].text, 'json.parser')
+        self.buildForm()
 
     def populateFormFrame(self):
         self.formInfo['formID'] = tk.StringVar(value='235')

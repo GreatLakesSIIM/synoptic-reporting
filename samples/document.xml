@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="http://dicom.nema.org/medical/dicom/current/output/html/part20.html#sect_7.1">
+  <templateId xmlns="" />
+  <code xmlns="" />
+  <component xmlns="">
+    <structuredBody>
+      <component>
+        <ClinicalInformation />
+        <ProcedureDescription />
+        <ComparisonStudy />
+        <Findings />
+        <Impression />
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
