@@ -2,6 +2,7 @@ import tkinter as tk
 import json
 import requests
 from bs4 import BeautifulSoup
+import os
 
 
 class Application(tk.Frame):
@@ -37,14 +38,14 @@ class Application(tk.Frame):
         print('Getting Patient Info')
         url = 'http://hackathon.siim.org/fhir/Patient/name={}'.format(
             self.formInfo['patientName'].get())
-        heads = {'apikey', ''}
+        heads = {'apikey', os.environ['SiimApiKey']}
         self.formInfo['req'] = requests.get(url, headers=heads)
         self.formInfo['bsForm'] = BeautifulSoup(
             self.formInfo['req'].text, 'json.parser')
         self.buildForm()
 
     def populateFormFrame(self):
-        self.formInfo['formID'] = tk.StringVar(value='235')
+        self.formInfo['formID'] = tk.StringVar(value='50513')
         self.formFrame.formSelectField = tk.Entry(
             master=self.formFrame, textvariable=self.formInfo['formID'])
         self.formFrame.formSelectField.grid(row=0, column=0)
@@ -59,7 +60,7 @@ class Application(tk.Frame):
 
     def getForm(self):
         self.formInfo['req'] = requests.get(
-            'http://radreport.org/html/htmldownload.php?id={}'.format(self.formInfo['formID'].get()))
+            'https://phpapi.rsna.org/radreport/v1/templates/{}/details'.format(self.formInfo['formID'].get()))
         self.formInfo['bsForm'] = BeautifulSoup(
             self.formInfo['req'].text, 'html.parser')
         self.buildForm()
