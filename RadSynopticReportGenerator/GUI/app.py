@@ -3,6 +3,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 import os
+import xml.etree.ElementTree as ET
 
 
 class Application(tk.Frame):
@@ -25,9 +26,9 @@ class Application(tk.Frame):
         self.populateFormFrame()
 
     def populatePatientInfoFrame(self):
-        self.patientInfo['patientName'] = ''
+        self.patientInfo['patientId'] = tk.StringVar(value='siimjoe')
         self.patientInfoFrame.pIdField = tk.Entry(
-            master=self.patientInfoFrame, textvariable=self.patientInfo['patientName'])
+            master=self.patientInfoFrame, textvariable=self.patientInfo['patientId'])
         self.patientInfoFrame.pIdField.grid(row=0, column=0)
 
         self.patientInfoFrame.pullPatientInfoButton = tk.Button(
@@ -36,13 +37,14 @@ class Application(tk.Frame):
 
     def pullPatientInfo(self):
         print('Getting Patient Info')
-        url = 'http://hackathon.siim.org/fhir/Patient/name={}'.format(
-            self.formInfo['patientName'].get())
-        heads = {'apikey', os.environ['SiimApiKey']}
-        self.formInfo['req'] = requests.get(url, headers=heads)
-        self.formInfo['bsForm'] = BeautifulSoup(
-            self.formInfo['req'].text, 'json.parser')
-        self.buildForm()
+        url = 'http://hackathon.siim.org/fhir/Patient/{}'.format(
+            self.patientInfo['patientId'].get())
+        heads = {
+            'apikey': os.environ['SiimApiKey'],
+            'Content-Type': 'application/fhir+json'
+        }
+        response = requests.get(url, headers=heads)
+        self.patientInfo['data'] = response.text
 
     def populateFormFrame(self):
         self.formInfo['formID'] = tk.StringVar(value='50513')
@@ -59,27 +61,33 @@ class Application(tk.Frame):
         self.formFrame.templateFrame.grid(row=1, column=0, columnspan=3)
 
     def getForm(self):
-        self.formInfo['req'] = requests.get(
-            'https://phpapi.rsna.org/radreport/v1/templates/{}/details'.format(self.formInfo['formID'].get()))
-        self.formInfo['bsForm'] = BeautifulSoup(
-            self.formInfo['req'].text, 'html.parser')
+        url = 'https://phpapi.rsna.org/radreport/v1/templates/{}/details'.format(
+            self.formInfo['formID'].get())
+        response = requests.get(url).text
+        self.formInfo['data'] = json.loads(response)['DATA']['templateData']
+        self.formInfo['html'] = BeautifulSoup(
+            self.formInfo['data'], 'html.parser')
+        # print(self.formInfo['html'])
         self.buildForm()
 
     def buildForm(self):
-        print(self.formInfo['bsForm'].title)
+        print(self.formInfo['html'].title)
         for child in self.formFrame.templateFrame.winfo_children():
             child.destroy()
         self.formFrame.title = tk.Label(master=self.formFrame.templateFrame,
-                                        anchor=tk.CENTER, padx=20, pady=5, text=self.formInfo['bsForm'].title.text)
+                                        anchor=tk.CENTER, padx=20, pady=5, text=self.formInfo['html'].title.text)
         self.formFrame.title.grid(row=2, column=1, columnspan=2)
 
-        coding = self.formInfo['bsForm']('script')[0].text
+        coding = self.formInfo['html']('script')[0].text
         self.formInfo['coding'] = coding.replace('<!--', '').replace('-->', '')
         self.formInfo['fields'] = {}
 
+        # from flask import Flask
+        # app = Flask(__name__)
+
         iRow = 3
-        for section in self.formInfo['bsForm']('section'):
-            if section.header.string in ('Findings'):
+        for section in self.formInfo['html']('section'):
+            if ('findings') in section.attrs['id']:
                 self.addTitleRow(self.formFrame.templateFrame,
                                  section.header.string, iRow)
                 iRow += 1
