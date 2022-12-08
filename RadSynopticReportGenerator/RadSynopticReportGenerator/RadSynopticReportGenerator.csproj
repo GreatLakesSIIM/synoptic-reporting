@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Hl7.Fhir.Specification.STU3" Version="0.95.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="RestSharp" Version="106.3.0" />
     <PackageReference Include="ResultDotNet" Version="2.0.2" />
   </ItemGroup>
